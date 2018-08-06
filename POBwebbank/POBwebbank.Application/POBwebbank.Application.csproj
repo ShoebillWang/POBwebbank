@@ -283,7 +283,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="POBwebbankApplicationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserApp\Dto\UserDto.cs" />
+    <Compile Include="UserApp\IUserAppService.cs" />
+    <Compile Include="UserApp\UserAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Abp\Framework\styles\abp.css.map" />
@@ -317,6 +321,12 @@
     <TypeScriptCompile Include="Abp\Framework\scripts\abp.d.ts" />
     <TypeScriptCompile Include="Abp\Framework\scripts\libs\abp.jquery.d.ts" />
     <TypeScriptCompile Include="Abp\Framework\scripts\libs\abp.signalr.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POBwebbank.Core\POBwebbank.Core.csproj">
+      <Project>{AF5A01DD-7BDC-4A94-AB14-56D600E69424}</Project>
+      <Name>POBwebbank.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
