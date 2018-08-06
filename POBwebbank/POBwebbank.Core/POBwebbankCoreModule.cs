@@ -3,7 +3,7 @@ using Abp.Modules;
 
 namespace POBwebbank.Core {
     //[DependsOn(typeof(AbpCoreModule))]
-    public class MyMVCABPCoreModule : AbpModule {
+    public class POBwebbankCoreModule : AbpModule {
         public override void PreInitialize() {
             //Configuration.Auditing.IsEnabledForAnonymousUsers = true;
 
