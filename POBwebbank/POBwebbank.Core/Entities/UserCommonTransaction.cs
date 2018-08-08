@@ -1,5 +1,4 @@
-namespace POBwebbank.Core
-{
+namespace POBwebbank.Core {
     using Abp.Domain.Entities;
     using System;
     using System.Collections.Generic;
@@ -7,8 +6,7 @@ namespace POBwebbank.Core
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class UserCommonTransaction : Entity
-    {
+    public partial class UserCommonTransaction : Entity<Guid> {
         public Guid Id { get; set; }
 
         public int UserId { get; set; }

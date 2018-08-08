@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace POBwebbank.Application.UserApp {
     public interface IUserAppService : IApplicationService {
 
-        UserDto GetMaintainUser(int user_id);
+        List<UserDto> GetMaintainUser(int UserId);
         void UpdateUser(UserDto maintainUser);
     }
 }

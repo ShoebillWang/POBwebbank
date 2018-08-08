@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POBwebbank.Web", "POBwebbank\POBwebbank.Web.csproj", "{9BB8D7EF-C510-4FF0-9D8C-D26FDEF17E8D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{47CDED1E-5B3C-45D3-A943-AD96080B071D} = {47CDED1E-5B3C-45D3-A943-AD96080B071D}
+		{2AD88965-2A4B-4947-8F30-C7B1BFBB409A} = {2AD88965-2A4B-4947-8F30-C7B1BFBB409A}
+		{AF5A01DD-7BDC-4A94-AB14-56D600E69424} = {AF5A01DD-7BDC-4A94-AB14-56D600E69424}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POBwebbank.Core", "POBwebbank.Core\POBwebbank.Core.csproj", "{AF5A01DD-7BDC-4A94-AB14-56D600E69424}"
 EndProject

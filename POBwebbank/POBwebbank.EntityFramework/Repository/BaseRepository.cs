@@ -19,8 +19,8 @@ namespace POBwebbank.EntityFramework.Repository {
         //add common methods for all repositories
     }
 
-    public abstract class BaseRepository<TEntity> : BaseRepository<TEntity, int>
-        where TEntity : class, IEntity<int> {
+    public abstract class BaseRepository<TEntity> : BaseRepository<TEntity, Guid>
+        where TEntity : class, IEntity<Guid> {
         protected BaseRepository(IDbContextProvider<POBwebbankModel> dbContextProvider)
             : base(dbContextProvider) {
 

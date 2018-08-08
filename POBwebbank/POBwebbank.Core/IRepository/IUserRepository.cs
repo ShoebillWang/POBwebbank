@@ -9,7 +9,7 @@ using Abp.Domain.Entities;
 using Abp.Authorization.Users;
 
 namespace POBwebbank.Core.IRepository {
-    public interface IUserRepository : IRepository<UserCommonTransaction, int> {
+    public interface IUserRepository : IRepository<UserCommonTransaction, Guid> {
 
         List<UserCommonTransaction> GetAllUsers();
         void UpdateUser(UserCommonTransaction userEntity);

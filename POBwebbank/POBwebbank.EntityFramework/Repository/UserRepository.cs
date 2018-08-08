@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Abp.EntityFramework;
 using POBwebbank.Core;
 using POBwebbank.Core.IRepository;
 
 namespace POBwebbank.EntityFramework.Repository {
-    public class UserRepository : BaseRepository<UserCommonTransaction, int>, IUserRepository {
+    public class UserRepository : BaseRepository<UserCommonTransaction, Guid>, IUserRepository {
 
         public UserRepository(IDbContextProvider<POBwebbankModel> dbContextProvider) : base(dbContextProvider) {
         }

@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Abp.Authorization.Users
+@using Abp.Web.Mvc.Extensions
+@using Abp.Web.Models
+@model POBwebbank.Models.CommonTransactListModel
+
+<h2>
+    常用交易設定
+</h2>
+<div class="body table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@("")</th>
+                <th>@("交易名稱")</th>
+                <th>@("順序")</th>
+                <th>@("設定時間")</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.UserTransaction) {
+            <tr>
+                <td>@("")</td>
+                <td>@user.TransactionId</td>
+                <td>@user.SetOrder</td>
+                <td>@user.UpdateTime</td>
+                @*<td><i class="material-icons" style="color:@(user.IsActive ? "green":"red");">@(user.IsActive ? "check_box" : "indeterminate_check_box")</i></td>
+                <td class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="#" class="waves-effect waves-block edit-user" data-user-id="@user.Id" data-target="#UserEditModal"><i class="material-icons">edit</i>@L("Edit")</a></li>
+                        <li><a href="#" class="waves-effect waves-block delete-user" data-user-id="@user.Id" data-user-name="@user.UserName"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
+                    </ul>
+                </td>*@
+            </tr>
+            }
+        </tbody>
+    </table>
+    @*<button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#UserCreateModal">
+            <i class="material-icons">add</i>
+        </button>*@
+</div>

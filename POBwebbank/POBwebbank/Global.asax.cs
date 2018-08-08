@@ -1,4 +1,6 @@
-﻿using Abp.Web;
+﻿using Abp.Castle.Logging.Log4Net;
+using Abp.Web;
+using Castle.Facilities.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +11,12 @@ using System.Web.Routing;
 
 namespace POBwebbank {
     public class MvcApplication : AbpWebApplication<POBwebbankWebModule> {
-        protected void Application_Start() {
-            AreaRegistration.RegisterAllAreas();
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+        protected override void Application_Start(object sender, EventArgs e) {
+            AbpBootstrapper.IocManager.IocContainer.AddFacility<LoggingFacility>(
+                f => f.UseAbpLog4Net().WithConfig(Server.MapPath("log4net.config"))
+            );
+
+            base.Application_Start(sender, e);
         }
     }
 }

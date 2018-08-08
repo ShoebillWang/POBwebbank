@@ -2,6 +2,7 @@
 using POBwebbank.Core.IRepository;
 using POBwebbank.Application.UserApp.Dto;
 using POBwebbank.Core;
+using System.Collections.Generic;
 
 namespace POBwebbank.Application.UserApp {
 
@@ -25,8 +26,8 @@ namespace POBwebbank.Application.UserApp {
         //    return users;
         //}
 
-        public UserDto GetMaintainUser(int user_id) {
-            UserDto MaintainUser = new UserDto();
+        public List<UserDto> GetMaintainUser(int user_id) {
+            List<UserDto> MaintainUser = new List<UserDto>();
 
             MaintainUser = _userRepository.GetAllUsers().
                 Select(u => new UserDto {
@@ -36,7 +37,7 @@ namespace POBwebbank.Application.UserApp {
                     SetOrder = u.SetOrder,
                     UpdateTime = u.UpdateTime
 
-                }).SingleOrDefault();
+                }).ToList();
 
             return MaintainUser;
         }

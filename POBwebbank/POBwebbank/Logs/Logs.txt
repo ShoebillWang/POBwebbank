@@ -1,0 +1,272 @@
+DEBUG 2018-08-08 10:42:55,550 [53   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-08 10:42:55,637 [53   ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-08-08 10:42:55,641 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.POBwebbankWebModule, POBwebbank, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,643 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.EntityFramwork.POBwebbankDataModule, POBwebbank.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,643 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,644 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,644 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,644 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.Application.POBwebbankApplicationModule, POBwebbank.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,644 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,644 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.Core.POBwebbankCoreModule, POBwebbank.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,645 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,645 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,645 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,645 [53   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:55,647 [53   ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-08-08 10:42:56,032 [53   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: POBwebbank.Core.POBwebbankModel, POBwebbank.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:42:57,458 [53   ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-08-08 10:42:57,491 [53   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-08 10:42:57,522 [53   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-08 10:42:57,607 [53   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-08 10:42:57,639 [53   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+ERROR 2018-08-08 10:42:59,842 [77   ] ank.Controllers.TransactOptionController - Filter name MustHaveTenant not found
+System.ApplicationException: Filter name MustHaveTenant not found
+   at EntityFramework.DynamicFilters.DynamicFilterExtensions.GetOrCreateScopedFilterParameters(DbContext context, String filterName)
+   at EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue(DbContext context, String filterName, String parameterName, Object value)
+   at Abp.EntityFramework.AbpDbContext.Initialize()
+   at Castle.MicroKernel.LifecycleConcerns.InitializationConcern.Apply(ComponentModel model, Object component)
+   at Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.ApplyConcerns(IEnumerable`1 steps, Object instance)
+   at Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.ApplyCommissionConcerns(Object instance)
+   at Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   at Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   at Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   at Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   at Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   at Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   at Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   at Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   at Castle.Windsor.WindsorContainer.Resolve(Type service, IDictionary arguments)
+   at Castle.Windsor.WindsorContainer.Resolve(Type service, Object argumentsAsAnonymousType)
+   at Abp.Dependency.IocManager.Resolve(Type type, Object argumentsAsAnonymousType)
+   at Abp.EntityFramework.DefaultDbContextResolver.Resolve[TDbContext](String connectionString)
+   at Abp.EntityFramework.Uow.TransactionScopeEfTransactionStrategy.CreateDbContext[TDbContext](String connectionString, IDbContextResolver dbContextResolver)
+   at Abp.EntityFramework.Uow.EfUnitOfWork.GetOrCreateDbContext[TDbContext](Nullable`1 multiTenancySide, String name)
+   at Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork, Nullable`1 multiTenancySide, String name)
+   at Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.GetDbContext(Nullable`1 multiTenancySide)
+   at Castle.Proxies.UserRepositoryProxy.get_Context_callback()
+   at Castle.Proxies.Invocations.EfRepositoryBase`3_get_Context.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.UserRepositoryProxy.get_Context()
+   at Abp.EntityFramework.Repositories.EfRepositoryBase`3.get_Table()
+   at Castle.Proxies.UserRepositoryProxy.get_Table_callback()
+   at Castle.Proxies.Invocations.EfRepositoryBase`3_get_Table.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.UserRepositoryProxy.get_Table()
+   at Castle.Proxies.UserRepositoryProxy.GetAll_callback()
+   at Castle.Proxies.Invocations.EfRepositoryBase`3_GetAll.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.UserRepositoryProxy.GetAll()
+   at POBwebbank.EntityFramework.Repository.UserRepository.GetAllUsers() in C:\Users\Lukas\Documents\POBwebbank\POBwebbank\POBwebbank.EntityFramework\Repository\UserRepository.cs:line 14
+   at Castle.Proxies.UserRepositoryProxy.GetAllUsers_callback()
+   at Castle.Proxies.Invocations.IUserRepository_GetAllUsers.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.UserRepositoryProxy.GetAllUsers()
+   at POBwebbank.Application.UserApp.UserAppService.GetMaintainUser(Int32 user_id) in C:\Users\Lukas\Documents\POBwebbank\POBwebbank\POBwebbank.Application\UserApp\UserAppService.cs:line 32
+   at Castle.Proxies.UserAppServiceProxy.GetMaintainUser_callback(Int32 user_id)
+   at Castle.Proxies.Invocations.IUserAppService_GetMaintainUser.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.UserAppServiceProxy.GetMaintainUser(Int32 UserId)
+   at POBwebbank.Controllers.TransactOptionController.OftenUsedTransact(Int32 id) in C:\Users\Lukas\Documents\POBwebbank\POBwebbank\POBwebbank\Controllers\TransactOptionController.cs:line 25
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__11_0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+DEBUG 2018-08-08 10:45:36,951 [64   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-08-08 10:45:36,952 [64   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-08 10:45:36,953 [64   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-08 10:45:36,953 [64   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-08-08 10:45:45,828 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-08 10:45:45,840 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-08-08 10:45:45,845 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.POBwebbankWebModule, POBwebbank, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,846 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.EntityFramwork.POBwebbankDataModule, POBwebbank.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,847 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,847 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,847 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,847 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.Application.POBwebbankApplicationModule, POBwebbank.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,847 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,847 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.Core.POBwebbankCoreModule, POBwebbank.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,848 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,848 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,848 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,848 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:45,850 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-08-08 10:45:46,153 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: POBwebbank.Core.POBwebbankModel, POBwebbank.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 10:45:47,816 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-08-08 10:45:47,891 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-08 10:45:47,931 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-08 10:45:48,053 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-08 10:45:48,104 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2018-08-08 11:26:14,769 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-08 11:26:14,781 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-08-08 11:26:14,785 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.POBwebbankWebModule, POBwebbank, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,787 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.EntityFramwork.POBwebbankDataModule, POBwebbank.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.Application.POBwebbankApplicationModule, POBwebbank.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.Core.POBwebbankCoreModule, POBwebbank.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:14,791 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-08-08 11:26:15,092 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: POBwebbank.Core.POBwebbankModel, POBwebbank.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:26:16,792 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-08-08 11:26:16,871 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-08 11:26:16,907 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-08 11:26:17,029 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-08 11:26:17,080 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2018-08-08 11:27:52,955 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-08 11:27:53,045 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-08-08 11:27:53,049 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.POBwebbankWebModule, POBwebbank, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,050 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.EntityFramwork.POBwebbankDataModule, POBwebbank.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,051 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,051 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,051 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,051 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.Application.POBwebbankApplicationModule, POBwebbank.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,051 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,051 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.Core.POBwebbankCoreModule, POBwebbank.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,052 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,052 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,052 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,052 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,054 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-08-08 11:27:53,454 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: POBwebbank.Core.POBwebbankModel, POBwebbank.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 11:27:53,541 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-08-08 11:27:53,610 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-08 11:27:53,643 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-08 11:27:53,817 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-08 11:27:53,875 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+ERROR 2018-08-08 11:27:54,455 [8    ] ank.Controllers.TransactOptionController - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult OftenUsedTransact(Int32)' in 'POBwebbank.Controllers.TransactOptionController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult OftenUsedTransact(Int32)' in 'POBwebbank.Controllers.TransactOptionController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+   at System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__11_0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+DEBUG 2018-08-08 16:50:08,369 [16   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-08-08 16:50:08,379 [16   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-08 16:50:08,381 [16   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-08 16:50:08,381 [16   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-08-08 16:50:17,350 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-08-08 16:50:17,361 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-08-08 16:50:17,366 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.POBwebbankWebModule, POBwebbank, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,367 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.EntityFramwork.POBwebbankDataModule, POBwebbank.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.Application.POBwebbankApplicationModule, POBwebbank.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: POBwebbank.Core.POBwebbankCoreModule, POBwebbank.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,369 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,369 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:17,371 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2018-08-08 16:50:17,647 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: POBwebbank.Core.POBwebbankModel, POBwebbank.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-08-08 16:50:19,113 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-08-08 16:50:19,161 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-08-08 16:50:19,196 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-08-08 16:50:19,290 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-08-08 16:50:19,325 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+ERROR 2018-08-08 16:50:19,756 [63   ] ank.Controllers.TransactOptionController - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult OftenUsedTransact(Int32)' in 'POBwebbank.Controllers.TransactOptionController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult OftenUsedTransact(Int32)' in 'POBwebbank.Controllers.TransactOptionController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+   at System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__11_0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+ERROR 2018-08-08 16:54:51,307 [16   ] ank.Controllers.TransactOptionController - The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult OftenUsedTransact(Int32)' in 'POBwebbank.Controllers.TransactOptionController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult OftenUsedTransact(Int32)' in 'POBwebbank.Controllers.TransactOptionController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+   at System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__11_0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)

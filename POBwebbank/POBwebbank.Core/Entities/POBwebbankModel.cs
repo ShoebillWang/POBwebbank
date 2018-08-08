@@ -14,6 +14,7 @@ namespace POBwebbank.Core {
         public virtual DbSet<UserCommonTransaction> UserCommonTransactions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
